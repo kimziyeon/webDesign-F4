@@ -39,6 +39,7 @@ header {
 }
 
 header>a {
+    width: 200px;
     height: 100%;
     align-content: center;
 }
@@ -52,12 +53,11 @@ nav {
 
 nav>ul {
     display: flex;
-    text-align: center;
 }
 
 nav>ul>li {
     width: 150px;
-
+    text-align: center;
 }
 
 nav>ul>li>a {
@@ -66,13 +66,15 @@ nav>ul>li>a {
     background-color: #e31a40;
     color: #fff;
     font-weight: bold;
+    font-size: 18px;
+
 }
 
 nav>ul>li>a.on,
 nav>ul>li:hover>a {
-    background-color: #ffc2cd;
+    background-color: #dadada;
     color: #e31a40;
-
+    border-bottom: 2px solid #fff;
 }
 
 .sub {
@@ -84,26 +86,27 @@ nav>ul>li:hover>a {
 .sub>li>a {
     height: 50px;
     align-content: center;
+    color: #ffff;
 }
 
 .sub>li>a.on,
 .sub>li:hover>a {
-    background-color: #a7a7a7;
     color: #e31a40;
+    background-color: #fff;
 }
-
 
 .n_back {
     width: 100%;
     height: 200px;
+    background-color: #ffc0cb;
     position: absolute;
+    right: 0;
     top: 100px;
-    left: 0;
-    background-color: #dadada;
-    z-index: 8;
+    z-index: 1;
     display: none;
 
 }
+
 
 .slide {
     width: 100%;
@@ -114,16 +117,16 @@ nav>ul>li:hover>a {
 
 .slide>ul {
     width: 100%;
-    height: 300%;
+    height: 1050px;
     position: absolute;
-    top: 0;
     left: 0;
-    z-index: 1;
+    top: 0;
+
 }
 
 .slide>ul>li {
     width: 100%;
-    height: calc(100% / 3);
+    height: 350px;
     position: relative;
 }
 
@@ -133,40 +136,42 @@ nav>ul>li:hover>a {
 }
 
 .slide .s_text {
+    width: 500px;
+    height: 120px;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    align-content: center;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
-    background-color: rgb(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 40px 120px;
-    text-align: center;
 }
 
+
 .slide .s_text>h2 {
-    font-size: 26px;
+    font-size: 25px;
 }
 
 .slide .s_text>p {
-    margin-top: 5px;
     font-size: 20px;
+    margin-top: 5px;
 }
 
-
 .slide .s1 {
-    background: url(/images/img1.jpg) no-repeat center / cover;
+    background: url(/images/img1.jpg) no-repeat center/cover;
 }
 
 .slide .s2 {
-    background: url(/images/img2.jpg) no-repeat center / cover;
+    background: url(/images/img2.jpg) no-repeat center/cover;
 
 }
 
 .slide .s3 {
-    background: url(/images/img3.jpg) no-repeat center / cover;
+    background: url(/images/img3.jpg) no-repeat center/cover;
 
 }
+
 
 main {
     width: 1340px;
@@ -174,14 +179,15 @@ main {
     position: relative;
 }
 
-
 .direct {
     width: 100%;
     height: 100px;
     background-color: #e31a40;
     position: absolute;
     top: -100px;
-    z-index: 5;
+    left: 0;
+    z-index: 2;
+
 }
 
 .direct>ul {
@@ -189,36 +195,30 @@ main {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 100px;
+    justify-content: space-around;
 }
 
 .direct>ul>li {}
 
 .direct>ul>li>a {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
 }
 
 .direct>ul>li>a>p {
-    color: #fff;
     margin-left: 5px;
+    color: #fff;
 }
 
-
-.banner {
+.bann {
     width: 100%;
     height: 150px;
 
 }
 
-.banner>a {
-    width: 100%;
-    height: 100%;
-}
-
-.banner>a>ul {
+.bann>a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -226,58 +226,68 @@ main {
     gap: 20px;
 }
 
-.banner .b_text {}
+.bann .b_text>h3 {
+    font-size: 23px;
+}
 
+.bann .b_text>p {
+    font-size: 20px;
+    margin-top: 5px;
+}
 
-.cont {
-    width: 1340px;
+.con {
+    width: 100%;
     height: 250px;
     display: flex;
 }
 
-.cont h3 {
-    display: inline-block;
-    padding: 10px 30px;
-    color: #fff;
-    background-color: #e31a40;
-}
-
-.cont .notice {
+.con .notice {
     width: 50%;
+    height: 100%;
 }
 
-.cont .notice>ul {
+.con .notice>ul {
     width: 100%;
-    padding: 30px 20px;
-
+    height: 100%;
+    padding: 10px 20px;
 }
 
-.cont .notice>ul>li {}
-
-.cont .notice>ul>li>a {
-    display: flex;
+.con .notice>ul>li {
+    margin: 5px 0;
     padding: 5px 0;
+    border-bottom: 1px solid #333;
+}
+
+.con .notice>ul>li:hover {
+    border-bottom: 1px solid #ffc0cb;
+    color: #ffc0cb;
+}
+
+.con .notice>ul>li>a {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
+    font-size: 18px;
 }
 
+.con h3 {
+    width: 130px;
+    height: 50px;
+    background-color: #ffc0cb;
+    text-align: center;
+    align-content: center;
+}
 
-
-.cont .gall {
+.con .gall {
     width: 50%;
+    height: 100%;
+
 }
 
-.cont .gall>ul {
+.con .gall>ul {
+    width: 100%;
     display: flex;
     gap: 10px;
-    text-align: center;
-}
-
-.cont .gall>ul>li {}
-
-.cont .gall>ul>li>a {}
-
-.cont .gall>ul>li>a>p {
-    margin-top: 5px;
 }
 
 footer {
@@ -288,7 +298,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    gap: 20px;
+    padding: 0 20px;
 }
 
 footer>a {
@@ -297,24 +308,28 @@ footer>a {
     align-content: center;
 }
 
+footer .copy {}
+
+footer .famm {}
+
 .pop {
     width: 100%;
     height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: rgb(0, 0, 0, 0.5);
     display: none;
 }
 
 .pop .p_inner {
-    width: 500px;
+    width: 550px;
     height: 400px;
     background-color: #fff;
-    border-radius: 10px;
     text-align: center;
-    padding: 30px 40px;
+    border-radius: 10px;
+    padding: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -325,7 +340,7 @@ footer>a {
 
 .pop .p_inner>p {
     margin-top: 20px;
-    line-height: 24px;
+    line-height: 25px;
 }
 
 .pop .p_inner .pop_off {
@@ -336,5 +351,5 @@ footer>a {
 }
 
 .pop .p_inner .pop_off:hover {
-    color: #e31a40;
+    color: #dadada;
 }
